@@ -1,4 +1,5 @@
-import {useEffect, useMemo, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
+import styles from './Home.module.scss';
 
 function Home(props) {
     const [json,setJson]=useState();
@@ -13,7 +14,7 @@ function Home(props) {
     },[json])
 
     return(
-        <div>this is Home page,json is {namePlus}</div>
+        <div className={styles.wrapper}>this is Home page,<span className={styles.wrapperTitle}>json is {namePlus}</span></div>
     )
 }
 export default Home;
