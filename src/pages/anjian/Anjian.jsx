@@ -63,7 +63,7 @@ function Anjian(props) {
     useEffect(()=>{
         const fetchData=({pageNo=1,pageSize=10}={})=>{
             setLoading(true);
-            api.get('/anjian/list?'+qs.stringify({...searchParam,...{pageNo,pageSize}}))
+            api.get('/anjian/listV2?'+qs.stringify({...searchParam,...{pageNo,pageSize}}))
                 .then(rsp=>{
                     const {records,current,size,total}=rsp.data.o;
                     setData(records);
